@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/style.css">
+    <title>Ballit Championship</title>
+</head>
+<body>
+    <main class="screenloaded">
+        <div class="game__container">
+            <figure>
+                <img class="game__bkg-image" src="/img/welcome.png" alt="">
+                <audio autoplay="autoplay" loop="loop" class="game__bkg-audio">
+                    <source src="/music/Battle Theme II v1.2.mp3" type="audio/mp3"/>
+                </audio>
+            </figure>
+            <div class="game__content">
+                <section class="game__section-banner-container">
+                    <h1 class="game__title">
+                        <strong class="game__title-strong">Ballit Championship</strong>
+                    </h1>
+                </section>
+                <section class="game__section-card-container">
+                    <div class="game__card">
+                        <ul class="game__card-list">
+                            <li class="game__card-list-item">
+                                <a href="/cadastro.html">
+                                <button data-contexto="Cadastro" class="game__card-button game__card-button--cadastro active" >Cadastrar Time</button>
+                                </a>
+                            </li>
+                            <a href="/campeonato.html">
+                            <li class="game__card-list-item">
+                                <button data-contexto="Inicio" class="game__card-button game__card-button--inicio active">Campeonato</button>
+                            </a>
+                            </li>
+                            <li class="game__card-list-item">
+                                <button data-contexto="reset" class="game__card-button game__card-button--reset active" id="resetButton">Resetar Dados</button>
+                            </li>
+                          <!--  <li class="game__card-list-item">
+                                <button data-contexto="fases" class="game__card-button game__card-button--fases active">Fases</button>
+                            </li>
+                            <li class="game__card-list-item">
+                                <button data-contexto="partida" class="game__card-button game__card-button--partida active">Partida</button>
+                            </li>
+                            <li class="game__card-list-item">
+                                <button data-contexto="final" class="game__card-button game__card-button--final active">Final</button>
+                            </li> -->
+                            
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="/js/index.js" defer></script>
+    <script src="/js/reset" defer></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/campeonato.css">
+    <title>Ballit Championship</title>
+</head>
+<body>
+    <main>
+        <figure>
+            <img class="game__bkg-image" src="/img/chaves.jpg" alt="">
+            <audio autoplay="autoplay" loop="loop" class="game__bkg-audio">
+                <source src="/music/battleThemeA.mp3" type="audio/mp3"/>
+            </audio>
+            
+            <div class="game__content">
+                <section class="game__section-banner-container">
+                    <h1 class="game__title">
+                        <strong class="game__title-strong">Ballit Championship</strong>
+                    </h1>
+                </section>
+                <div class="game__screens"> 
+                    <section class="game__lista-times">
+                        <table id="game__lista-equipes">
+                            <tr>
+                                <th>Nome do Time</th>
+                                <th>Pontuação</th>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </section>
+                    <div> 
+                        <h2 class="game__fases-title"></h2>
+                        <table class="game__board">
+                            <tr>
+                                <td class="game__chaves"></td>
+                                <td class="game__chaves"></td>
+                            </tr>
+                        </table>
+                        <table class="game__partida">
+                            <tr>
+                                <td class="game__"></td>
+                                <td class="game__"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div id="popup" class="popup">
+                        <div class="popup-content">
+                            <span class="close-btn" id="closePopup">&times;</span>
+                            <h2 class="game__title-partida">Partidas</h2>
+                            <div id="partidas-container">
+                                <!-- O conteúdo das partidas será inserido aqui -->
+                            </div>
+                            <div id="score-container">
+                                <p>Time A: <span id="score-timeA">50</span> pontos</p>
+                                <p>Time B: <span id="score-timeB">50</span> pontos</p>
+                            </div>
+                            <div class="button-container">
+                                <button class="game__blot-timeA">Blot Time A</button>
+                                <button class="game__blot-timeB">Blot Time B</button>
+                                <button class="game__plif-timeA">Plif Time A</button>
+                                <button class="game__plif-timeB">Plif Time B</button>
+                                <button class="game__end">Encerrar Partida</button>
+                            </div>
+                            <button class="game__start">Start</button>
+                            <button class="game__next">Próxima Partida</button>
+                        </div>
+
+
+                    </div>  
+                    </div>
+                        <div class="game__controls">
+                            <button class="game__card-button--start active">Sortear times</button>
+                            <button class="game__card-button--partida active" id="openPopup">Iniciar Partida</button>
+                            <button class="game__nextFase">Próxima Fase</button>
+                            <button class="game__card-button--final active" onclick="Partida()">Final</button>
+                        </div>
+            </div>
+            <section>
+
+            </section>
+        </figure>  
+        <a href="/index.html">
+        <button class="game__card-button--home active">Home</button>
+        </a> 
+    </main>
+</body>
+
+<script src="/js/lista_times.js" defer></script>
+<script src="/js/sortear.js" defer></script>
+<script src="/js/atualizar.js" defer></script>
+<script src="/js/controles.js" defer></script>
+<script src="/js/inicial.js" defer></script>
+</html>

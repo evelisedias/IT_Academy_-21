@@ -1,0 +1,140 @@
+:root {
+    --color-primary: #123456;
+    --color-secondary: #FFF;
+    --azul-royal: #144480;
+    --fundo-card: rgba(20, 68, 128, 0.30);
+    --main-bg-color: linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
+}
+
+html {
+    min-height: 100vh;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.game__container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game__bkg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.game__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    color: var(--color-secondary);
+}
+
+.game__section-banner-container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.game__title {
+    font-size: 4rem;
+    font-family: 'Unbounded', cursive;
+    color: var(--color-primary);
+}
+
+.game__title-strong {
+    font-weight: 600;
+}
+
+.game__section-card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.game__card {
+    border-radius: 3.2rem;
+    border: 0.2rem solid var(--azul-royal);
+    background: var(--fundo-card);
+    padding: 2.4rem;
+    width: 59rem;
+    max-width: 90%;
+}
+
+.game__card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.game__card-button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    background: none;
+    padding: 0.8rem;
+    color: var(--color-secondary);
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.game__card-button.active {
+    border-radius: 0.8rem;
+    background: var(--azul-royal);
+    font-weight: 600;
+}
+
+button {
+    border: solid 2px var(--color-primary);
+    border-radius: 20px;
+    background-color: var(--color-secondary);
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    transform: scale(1.2);
+}
+
+/* Para Tablets */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .game__section-banner-container {
+        width: 48rem;
+    }
+}
+
+/* Para Celulares */
+@media (max-width: 767px) {
+    .game__section-banner-container {
+        width: 32rem;
+    }
+
+    .game__title {
+        font-size: 2.6rem;
+    }
+
+    .game__card-timer {
+        font-size: 6rem;
+    }
+}

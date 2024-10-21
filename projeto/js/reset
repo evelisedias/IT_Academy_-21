@@ -1,0 +1,41 @@
+//resetar jogo
+document.getElementById('resetButton').addEventListener('click', resetGame());
+
+function resetGame() {
+    localStorage.clear(); 
+    updateTimesList();
+    alert('Os dados do jogo foram resetados.'); 
+}
+
+// atualizar lista
+function updateTimesList() {
+    const listaDeTimes = JSON.parse(localStorage.getItem('listaDeTimes'));
+    const times = document.querySelector('#game__lista-equipes'); 
+
+    if (!listaDeTimes || listaDeTimes.length === 0) {
+        times.innerHTML = '<p>Não há times suficientes Cadastrados</p>'; 
+    } else {
+        let tableHTML = `
+            <tr>
+                <th>Nome do Time</th>
+                <th>Pontuação</th>
+            </tr>`;
+        
+        listaDeTimes.forEach(time => {
+            tableHTML += `
+                <tr> 
+                    <td style="text-align: center;">${time.nome}</td>
+                    <td style="text-align: center;">${time.pontos}</td>
+                </tr>`;
+        });
+
+        times.innerHTML = tableHTML;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const resetButton = document.querySelector('[data-contexto="reset"]');
+    if (resetButton) {
+        resetButton.addEventListener('click', resetGame);
+    }
+});

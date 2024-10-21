@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/cadastro.css">
+
+</head>
+<body>
+    <main>
+        <figure>
+            <img class="game__bkg-image" src="/img/criar_time.jpg" alt="">
+            <audio autoplay="autoplay" loop="loop" class="game__bkg-audio">
+                <source src="/music/Battle Theme II v1.2.mp3" type="audio/mp3"/>
+            </audio>
+        </figure> 
+            <div class="game__content">
+                <section class="game__section-banner-container">
+                    <h1 class="game__title">
+                        <strong class="game__title-strong">Ballit Championship</strong>
+                    </h1>
+                </section>
+                <div class="game__cadastro--times card">
+                    <form class="game__cadastro" action="" method="post" id="game__cadastro--times">
+                        <h2>Faça o seu cadastro</h2>
+                        <label for="time">Nome do Time</label>
+                        <input type="text" id="nome__time" required>
+                        <label type="grito">Grito de Guerra</label>
+                        <textarea cols="30" rows="5" type="text" id="grito" required></textarea>
+                        <label for="fundacao">Ano de Fundação</label>
+                        <input type="text" id="fundacao" required>
+                        <button class="game__card-button active" id="game__salvar-time">Salvar</button>
+                    </form>
+            </div>
+            </div>
+            <section>
+
+            </section>
+        </figure>  
+        <a href="/campeonato.html">
+        <button class="game__card-button--equipes active" id="game__campeonato">Campeonato</button>
+        </a>
+        <a href="/index.html">
+        <button class="game__card-button--inicio active">Home</button>
+        </a> 
+    </main>
+    <script src="/js/index.js" defer></script>
+</body>
+</html>

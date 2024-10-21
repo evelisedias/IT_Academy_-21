@@ -1,0 +1,223 @@
+:root {
+    --color-primary: #123456;
+    --color-secondary: #FFF;
+    --azul-royal: #144480;
+    --fundo-card: rgba(20, 68, 128, 0.30);
+}
+
+html {
+    min-height: 100vh;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden; 
+}
+
+.game__bkg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.game__title {
+    margin-left: 12em;
+    font-size: 4rem;
+    font-family: 'Unbounded', cursive;
+    color: var(--color-primary);
+}
+
+.game__screens {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+}
+
+.game__lista-times {
+    border-radius: 3.2rem;
+    border: 0.2rem solid var(--azul-royal);
+    background: var(--color-secondary);
+    padding: 2.4rem;
+    width: 59rem;
+    height: 35em;
+    max-width: 18%;
+    margin-right: auto;
+    margin-left: 10px ;
+}
+
+#game__lista-equipes {
+    display: block;
+    align-items: center;
+    color: var(--azul-royal);
+    font-size: 12px;
+}
+
+th {
+padding: 1em;
+font-size: 12px;
+    
+}
+
+table {
+    padding: 1em;
+}
+
+.game__controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    color: var(--color-secondary);
+    margin-left: 50.5em;
+    margin-top: 5em;
+}
+
+.game__card-button--home {
+    position: absolute;
+    bottom: 20px; 
+    right: 10px; 
+}
+
+.game__board {
+    border-radius: 3.2rem;
+    border: 0.2rem solid var(--azul-royal);
+    background: var(--color-secondary);
+    padding: 2em;
+    width: 100rem;
+    height: 40em;
+    max-width: 50%;
+    color: var(--azul-royal);
+}
+
+.game__chaves {
+    color: var(--azul-royal);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+button, .close-btn {
+    border: solid 2px var(--color-primary);
+    border-radius: 20px;
+    background-color: var(--color-secondary);
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+button:hover, .close-btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    transform: scale(1.2);
+}
+
+/*Popup*/ 
+.popup{
+    display: none;
+    position: fixed;
+    z-index: -2;
+    border-radius: 10px;
+    transform: translateX(-5%);
+    margin-top: 4em;
+    margin-left: 50em; /*temporario*/
+    width: 40%;
+    height: 70%;
+    overflow: auto;
+    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 50px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    height: 70%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.button-container button {
+    margin-bottom: 0.5em;
+    width: 100%;
+}
+
+#score-container {
+   position: absolute;
+   bottom:20%;
+   right: 2em;
+   width: 15em;
+   text-align: rigth;
+   margin-right: 0;
+   font-size: 12px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    font-size: 1.5em; 
+    cursor: pointer; 
+    color: #000; 
+    background: none; 
+    border: none; 
+    }
+
+.game__title-partida{
+    position: absolute;
+    top: 10px;
+    left: 17em;
+}
+.button-container{
+    position: absolute;
+    margin-top: 10em;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2em;
+    }
+.game__next{
+    position: absolute;
+    left: 5em;
+    bottom: 5px;
+}
+
+.game__start{
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+}
+
+
+/* Para Tablets */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .game__section-banner-container {
+        width: 48rem;
+    }
+}
+
+/* Para Celulares */
+@media (max-width: 767px) {
+    .game__section-banner-container {
+        width: 32rem;
+    }
+
+    .game__title {
+        font-size: 2.6rem;
+    }
+
+    .game__card-timer {
+        font-size: 6rem;
+    }
+}
